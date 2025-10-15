@@ -39,6 +39,9 @@ let discount = 0;
 // Inizializzo spazio per il fullname
 const ticketFullName = document.getElementById('ticket-fullname')
 
+// Inizializzo tipologia biglietto
+const typeOfTicket = document.getElementById('type-ticket')
+
 // Creazione funzione per non resettare il form e calcolare il prezzo finale
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -60,14 +63,20 @@ form.addEventListener("submit", (event) => {
     // Applico lo sconto del 20% se il passeggero è minorenne
     discount = baseCost * 0.2;
     finalCost = baseCost - discount;
+    // Biglietto minori
+    typeOfTicket.innerHTML = 'Biglietto minori'
   } else if (ageEl >= 65) {
     // Applico lo sconto del 40% se il passeggero è over 65
     discount = baseCost * 0.4;
     finalCost = baseCost - discount;
+    // Biglietto over 65
+    typeOfTicket.innerHTML = 'Biglietto over 65'
   } else {
     // Non applico nessuno sconto
     finalCost = baseCost;
     console.log(finalCost.toFixed(2));
+    // Biglietto standard
+    typeOfTicket.innerHTML = 'Biglietto standard'
   }
 
   // Mostro come output il prezzo totale del viaggio
@@ -78,4 +87,6 @@ form.addEventListener("submit", (event) => {
 
   // Inserisco il fullname nel ticket
   ticketFullName.innerHTML = fullNameEl
+
+
 });
