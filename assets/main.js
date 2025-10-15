@@ -1,7 +1,6 @@
 /*
 TOOLS:
 
-- promt
 - const / let
 - operatore di comparazione
 - if / else
@@ -11,6 +10,8 @@ TOOLS:
 
 // Inizializzo il form
 const form = document.getElementById("form");
+
+// Inizializzo l'input del nome e cognome 
 
 // Inizializzo l'input dei chilometri da percorrere
 const kmField = document.getElementById("km");

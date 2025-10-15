@@ -8,13 +8,27 @@
 
 <body>
     <!--Contenuto-->
+    <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
     <form id="form">
         <div>
+            <!--Nome e cognome-->
+            <input id="full-name" type="text" placeholder="Inserisci nome e cognome" required>
+            <!--Chilometri-->
             <input id="km" type="number" placeholder="Inserisci chilometri" required>
+            <!--Età-->
             <input id="age" type="number" placeholder="Inserisci età" required>
+            <!--Invio-->
             <button type="submit">Submit</button>
         </div>
     </form>
+
+    <section id="ticket">
+        <h1>IL TUO BIGLIETTO</h1>
+        <div>
+            <h2>NOME PASSEGGERO</h2>
+            <span id="ticket-fullname"></span>
+        </div>
+    </section>
 
 
 
