@@ -9,11 +9,17 @@ TOOLS:
 
 /* Inizializzazione valori con inserimento da input */
 
-// Inserimento dei chilometri da percorrere
-let km = Number(prompt('Inserisci i chilometri che vuoi percorrere'))
+// Inizializzo il form
+const form = document.getElementById('form')
 
-// Inserimento dell'età del passeggero
-let age = Number(prompt('Inserisci la tua età'))
+// Inizializzo l'input dei chilometri da percorrere
+const kmField = document.getElementById('km') 
+
+// Inizializzo l'input degli anni del passeggero
+const ageField = document.getElementById('age')
+
+// Inizializzo il bottone submit
+const button = document.querySelector('button')
 
 /* Inizializzazione valori predefiniti */
 
@@ -25,6 +31,11 @@ let finalCost = 0
 
 // Sconto
 let discount = 0
+
+// Creazione funzione per non resettare il form
+form.addEventListener('submit', (event) => {
+    event.preventDefault()
+})
 
 /* Calcolo del prezzo totale del viaggio */
 
@@ -53,4 +64,4 @@ if (age < 18){
 }
 
 // Mostro come output il prezzo totale del viaggio
-alert("Il prezzo finale è di €" + finalCost.toFixed(2))
+console.log("Il prezzo finale è di €" + finalCost.toFixed(2))
