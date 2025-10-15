@@ -38,9 +38,11 @@
                     </div>
                     <div class="mt-5 text-center">
                         <!--Invio-->
-                        <button class="btn btn-secondary border-warning border-2 text-white" type="submit">Genera</button>
+                        <button class="btn btn-secondary border-warning border-2 text-white"
+                            type="submit">Genera</button>
                         <!--Annulla-->
-                        <button class="btn btn-secondary border-warning border-2 text-white" type="reset">Annulla</button>
+                        <button class="btn btn-secondary border-warning border-2 text-white"
+                            type="reset">Annulla</button>
                     </div>
                 </form>
             </div>
@@ -49,26 +51,31 @@
 
         <!--Ticket dell'utente-->
         <section id="ticket">
-            <h1>IL TUO BIGLIETTO</h1>
-            <div>
-                <h2>NOME PASSEGGERO</h2>
-                <span id="ticket-fullname"></span>
-            </div>
-            <div>
-                <h3>Offerta</h3>
-                <span id="type-ticket"></span>
-            </div>
-            <div>
-                <h3>Carrozza</h3>
-                <span id="carrozza"></span>
-            </div>
-            <div>
-                <h3>Codice CP</h3>
-                <span id="cod-cp"></span>
-            </div>
-            <div>
-                <h3>Costo biglietto</h3>
-                <span id="ticket-cost"></span>
+            <h1 class="text-white text-center my-3 text-uppercase">il tuo biglietto</h1>
+            <div class="bg-white p-4">
+                <h2 class="text-uppercase">dettagli passeggero</h2>
+                <div class="d-flex justify-content-between">
+                    <div class="bg-secondary p-3">
+                        <h3 class="text-uppercase mb-3">nome passeggero</h3>
+                        <span class="fw-bold" id="ticket-fullname"></span>
+                    </div>
+                    <div class="pt-3">
+                        <h4>Offerta</h4>
+                        <span id="type-ticket"></span>
+                    </div>
+                    <div class="pt-3">
+                        <h4>Carrozza</h4>
+                        <span id="carrozza"></span>
+                    </div>
+                    <div class="pt-3">
+                        <h4>Codice CP</h4>
+                        <span id="cod-cp"></span>
+                    </div>
+                    <div class="pt-3">
+                        <h4>Costo biglietto</h4>
+                        <span id="ticket-cost"></span>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
