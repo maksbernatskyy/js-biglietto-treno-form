@@ -12,43 +12,49 @@
 
 <body>
     <!--Contenuto-->
-    <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-    <form id="form">
+    <main>
+        <!--Form di inserimento dati-->
         <div>
-            <!--Nome e cognome-->
-            <input id="full-name" type="text" placeholder="Inserisci nome e cognome" required>
-            <!--Chilometri-->
-            <input id="km" type="number" placeholder="Inserisci chilometri" required>
-            <!--Età-->
-            <input id="age" type="number" placeholder="Inserisci età" required>
-            <!--Invio-->
-            <button type="submit">Submit</button>
+            <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+            <form id="form">
+                <div>
+                    <!--Nome e cognome-->
+                    <input id="full-name" type="text" placeholder="Inserisci nome e cognome" required>
+                    <!--Chilometri-->
+                    <input id="km" type="number" placeholder="Inserisci chilometri" required>
+                    <!--Età-->
+                    <input id="age" type="number" placeholder="Inserisci età" required>
+                    <!--Invio-->
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
         </div>
-    </form>
 
-    <section id="ticket">
-        <h1>IL TUO BIGLIETTO</h1>
-        <div>
-            <h2>NOME PASSEGGERO</h2>
-            <span id="ticket-fullname"></span>
-        </div>
-        <div>
-            <h3>Offerta</h3>
-            <span id="type-ticket"></span>
-        </div>
-        <div>
-            <h3>Carrozza</h3>
-            <span id="carrozza"></span>
-        </div>
-        <div>
-            <h3>Codice CP</h3>
-            <span id="cod-cp"></span>
-        </div>
-        <div>
-            <h3>Costo biglietto</h3>
-            <span id="ticket-cost"></span>
-        </div>
-    </section>
+        <!--Ticket dell'utente-->
+        <section id="ticket">
+            <h1>IL TUO BIGLIETTO</h1>
+            <div>
+                <h2>NOME PASSEGGERO</h2>
+                <span id="ticket-fullname"></span>
+            </div>
+            <div>
+                <h3>Offerta</h3>
+                <span id="type-ticket"></span>
+            </div>
+            <div>
+                <h3>Carrozza</h3>
+                <span id="carrozza"></span>
+            </div>
+            <div>
+                <h3>Codice CP</h3>
+                <span id="cod-cp"></span>
+            </div>
+            <div>
+                <h3>Costo biglietto</h3>
+                <span id="ticket-cost"></span>
+            </div>
+        </section>
+    </main>
 
 
 
