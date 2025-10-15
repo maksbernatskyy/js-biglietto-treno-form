@@ -10,25 +10,40 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="bg-danger bg-gradient">
     <!--Contenuto-->
-    <main>
+    <main class="container">
         <!--Form di inserimento dati-->
-        <div>
-            <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-            <form id="form">
-                <div>
-                    <!--Nome e cognome-->
-                    <input id="full-name" type="text" placeholder="Inserisci nome e cognome" required>
-                    <!--Chilometri-->
-                    <input id="km" type="number" placeholder="Inserisci chilometri" required>
-                    <!--Età-->
-                    <input id="age" type="number" placeholder="Inserisci età" required>
-                    <!--Invio-->
-                    <button type="submit">Submit</button>
-                </div>
-            </form>
-        </div>
+        <section>
+            <!--Titolo card-->
+            <h1 class="text-white text-center my-3 text-uppercase">calcola il prezzo del tuo biglietto</h1>
+            <div class="card py-4">
+                <form id="form">
+                    <div class="d-flex justify-content-around">
+                        <!--Nome e cognome-->
+                        <div>
+                            <h4 class="text-danger text-center">Nome Cognome</h4>
+                            <input id="full-name" type="text" placeholder="Inserisci nome e cognome" required>
+                        </div>
+                        <!--Chilometri-->
+                        <div>
+                            <h4 class="text-danger text-center">Km da percorrere</h4>
+                            <input id="km" type="number" placeholder="Inserisci chilometri" required>
+                        </div>
+                        <!--Età-->
+                        <div>
+                            <h4 class="text-danger text-center">Fascia d'età</h4>
+                            <input id="age" type="number" placeholder="Inserisci età" required>
+                        </div>
+                    </div>
+                    <div>
+                        <!--Invio-->
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
 
         <!--Ticket dell'utente-->
         <section id="ticket">
