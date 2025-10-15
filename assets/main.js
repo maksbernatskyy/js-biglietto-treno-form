@@ -53,6 +53,9 @@ const carriageTicket = document.getElementById('carrozza')
 // Inizializzo il codice CP
 const cpTicket = document.getElementById('cod-cp')
 
+// Inizializzo lo spazione per il costo finale del biglietto
+const costTicket = document.getElementById('ticket-cost')
+
 // Creazione funzione per non resettare il form e calcolare il prezzo finale
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -106,6 +109,9 @@ form.addEventListener("submit", (event) => {
 
   // Inserisco il codice CP nel ticket
   cpTicket.innerHTML = getRandomNumber(99000, 100000)
+
+  // Insersco il costo finale nel ticket
+  costTicket.innerHTML = finalCost.toFixed(2) + '€'
 
 
 });
