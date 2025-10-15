@@ -11,7 +11,8 @@ TOOLS:
 // Inizializzo il form
 const form = document.getElementById("form");
 
-// Inizializzo l'input del nome e cognome 
+// Inizializzo l'input del nome e cognome
+const fullNameField = document.getElementById("full-name");
 
 // Inizializzo l'input dei chilometri da percorrere
 const kmField = document.getElementById("km");
@@ -32,6 +33,11 @@ let finalCost = 0;
 
 // Sconto
 let discount = 0;
+
+/* Inizializzazione valori inseiti nella pagina */
+
+// Inizializzo spazio per il fullname
+const ticketFullName = document.getElementById('ticket-fullname')
 
 // Creazione funzione per non resettare il form e calcolare il prezzo finale
 form.addEventListener("submit", (event) => {
@@ -54,12 +60,10 @@ form.addEventListener("submit", (event) => {
     // Applico lo sconto del 20% se il passeggero è minorenne
     discount = baseCost * 0.2;
     finalCost = baseCost - discount;
-
   } else if (ageEl >= 65) {
     // Applico lo sconto del 40% se il passeggero è over 65
     discount = baseCost * 0.4;
     finalCost = baseCost - discount;
-
   } else {
     // Non applico nessuno sconto
     finalCost = baseCost;
@@ -68,4 +72,10 @@ form.addEventListener("submit", (event) => {
 
   // Mostro come output il prezzo totale del viaggio
   console.log("Il prezzo finale è di €" + finalCost.toFixed(2));
+
+  // Inizializzo il valore inserito in fullName
+  const fullNameEl = fullNameField.value;
+
+  // Inserisco il fullname nel ticket
+  ticketFullName.innerHTML = fullNameEl
 });
