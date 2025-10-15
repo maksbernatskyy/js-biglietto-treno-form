@@ -6,6 +6,11 @@ TOOLS:
 - if / else
 */
 
+// Inizializzo funzione per il random
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
 /* Inizializzazione valori con inserimento da input */
 
 // Inizializzo il form
@@ -44,6 +49,9 @@ const typeOfTicket = document.getElementById('type-ticket')
 
 // Inizializzo il numero della carrozza
 const carriageTicket = document.getElementById('carrozza')
+
+// Inizializzo il codice CP
+const cpTicket = document.getElementById('cod-cp')
 
 // Creazione funzione per non resettare il form e calcolare il prezzo finale
 form.addEventListener("submit", (event) => {
@@ -94,7 +102,10 @@ form.addEventListener("submit", (event) => {
   fullNameTicket.innerHTML = fullNameEl
 
   // Inserisco il numero della arrozza nel ticket
-  carriageTicket.innerHTML = Math.floor(Math.random() * 10) + 1
+  carriageTicket.innerHTML = getRandomNumber(1, 10)
+
+  // Inserisco il codice CP nel ticket
+  cpTicket.innerHTML = getRandomNumber(99000, 100000)
 
 
 });
