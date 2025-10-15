@@ -112,6 +112,4 @@ form.addEventListener("submit", (event) => {
 
   // Insersco il costo finale nel ticket
   costTicket.innerHTML = finalCost.toFixed(2) + '€'
-
-
 });
