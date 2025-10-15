@@ -10,58 +10,66 @@ TOOLS:
 /* Inizializzazione valori con inserimento da input */
 
 // Inizializzo il form
-const form = document.getElementById('form')
+const form = document.getElementById("form");
 
 // Inizializzo l'input dei chilometri da percorrere
-const kmField = document.getElementById('km') 
+const kmField = document.getElementById("km");
 
 // Inizializzo l'input degli anni del passeggero
-const ageField = document.getElementById('age')
+const ageField = document.getElementById("age");
 
 // Inizializzo il bottone submit
-const button = document.querySelector('button')
+const button = document.querySelector("button");
 
 /* Inizializzazione valori predefiniti */
 
 // Prezzo al chilometro
-const costAtKm = 0.21
+const costAtKm = 0.21;
 
 // Prezzo finale
-let finalCost = 0
+let finalCost = 0;
 
 // Sconto
-let discount = 0
+let discount = 0;
 
 // Creazione funzione per non resettare il form
-form.addEventListener('submit', (event) => {
-    event.preventDefault()
-})
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-/* Calcolo del prezzo totale del viaggio */
+  // Inizializzo valore inserito nei chilometri
+  const kmEl = kmField.value;
+  console.log(kmEl);
 
-// Calcolo il prezzo in base ai chilometri
-let baseCost = costAtKm * km
-console.log(baseCost.toFixed(2))
+  // Inizializzo valore inserito nell'età
+  const ageEl = ageField.value;
+  console.log(ageEl);
 
-if (age < 18){
+  /* Calcolo del prezzo totale del viaggio */
+
+  // Calcolo il prezzo in base ai chilometri
+  let baseCost = costAtKm * kmEl;
+  console.log(baseCost.toFixed(2));
+
+  if (ageEl < 18) {
     // Applico lo sconto del 20% se il passeggero è minorenne
-    discount = baseCost * 0.2
-    console.log(discount.toFixed(2))
-    finalCost = baseCost - discount
-    console.log(finalCost.toFixed(2))
+    discount = baseCost * 0.2;
+    console.log(discount.toFixed(2));
+    finalCost = baseCost - discount;
+    console.log(finalCost.toFixed(2));
 
-} else if (age >= 65){
+  } else if (ageEl >= 65) {
     // Applico lo sconto del 40% se il passeggero è over 65
-    discount = baseCost * 0.4
-    console.log(discount.toFixed(2))
-    finalCost = baseCost - discount
+    discount = baseCost * 0.4;
+    console.log(discount.toFixed(2));
+    finalCost = baseCost - discount;
     console.log(finalCost.toFixed(2));
-
-} else{
+    
+  } else {
     // Non applico nessuno sconto
-    finalCost = baseCost
+    finalCost = baseCost;
     console.log(finalCost.toFixed(2));
-}
+  }
 
-// Mostro come output il prezzo totale del viaggio
-console.log("Il prezzo finale è di €" + finalCost.toFixed(2))
+  // Mostro come output il prezzo totale del viaggio
+  console.log("Il prezzo finale è di €" + finalCost.toFixed(2));
+});
