@@ -32,7 +32,7 @@ let finalCost = 0;
 // Sconto
 let discount = 0;
 
-// Creazione funzione per non resettare il form
+// Creazione funzione per non resettare il form e calcolare il prezzo finale
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
