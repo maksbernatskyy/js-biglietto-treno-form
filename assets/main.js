@@ -37,10 +37,13 @@ let discount = 0;
 /* Inizializzazione valori inseiti nella pagina */
 
 // Inizializzo spazio per il fullname
-const ticketFullName = document.getElementById('ticket-fullname')
+const fullNameTicket = document.getElementById('ticket-fullname')
 
 // Inizializzo tipologia biglietto
 const typeOfTicket = document.getElementById('type-ticket')
+
+// Inizializzo il numero della carrozza
+const carriageTicket = document.getElementById('carrozza')
 
 // Creazione funzione per non resettare il form e calcolare il prezzo finale
 form.addEventListener("submit", (event) => {
@@ -65,12 +68,14 @@ form.addEventListener("submit", (event) => {
     finalCost = baseCost - discount;
     // Biglietto minori
     typeOfTicket.innerHTML = 'Biglietto minori'
+
   } else if (ageEl >= 65) {
     // Applico lo sconto del 40% se il passeggero è over 65
     discount = baseCost * 0.4;
     finalCost = baseCost - discount;
     // Biglietto over 65
     typeOfTicket.innerHTML = 'Biglietto over 65'
+
   } else {
     // Non applico nessuno sconto
     finalCost = baseCost;
@@ -86,7 +91,10 @@ form.addEventListener("submit", (event) => {
   const fullNameEl = fullNameField.value;
 
   // Inserisco il fullname nel ticket
-  ticketFullName.innerHTML = fullNameEl
+  fullNameTicket.innerHTML = fullNameEl
+
+  // Inserisco il numero della arrozza nel ticket
+  carriageTicket.innerHTML = Math.floor(Math.random() * 10) + 1
 
 
 });
